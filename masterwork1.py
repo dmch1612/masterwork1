@@ -40,5 +40,5 @@ ap_hi = st.slider('Верхнее Давление ', 90, 180)
 ap_lo = st.slider('Нижнее Давление ', 60, 120)
 
 y_pr = model.predict_proba([[gender, height, weight, ap_hi, ap_lo,cholesterol, gluc, smoke,alco,active, age_year]])[:,1]
-
+# Так и не понял почему значение переменной y_pr выводится с новой строки
 st.write('Вероятность появления сердечных заболеваний, %', np.round((y_pr*100),2))
